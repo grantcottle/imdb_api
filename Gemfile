@@ -5,6 +5,7 @@ ruby '2.4.4'
 
 
 gem 'rails', '~> 5.2.1'
+gem 'rack-cors'
 gem 'dotenv-rails', :groups => [:development, :test]
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
