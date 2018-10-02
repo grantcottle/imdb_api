@@ -26,7 +26,8 @@ Requirements
 
 Design a REST API with three endpoints:
 
- https://imdb-api-backend.herokuapp.com/movies
+ https://imdb-api-backend.herokuapp.com/movies 
+ 
  https://imdb-api-backend.herokuapp.com/search?query=lord
 
 /movie/${id} when given the appropriate id, will yield the movie matching that identifier (more on where that id comes from shortly).
