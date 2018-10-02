@@ -17,7 +17,6 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-Dotenv::Railtie.load
 
 module ImdbApi
   class Application < Rails::Application
