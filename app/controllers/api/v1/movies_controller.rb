@@ -1,19 +1,19 @@
-class Api::V1::MovieController < ApplicationController
+class Api::V1::MoviesController < ApplicationController
   before_action :set_api_v1_movie, only: [:show, :update, :destroy]
 
-  # GET /api/v1/movie
+  # GET /api/v1/movies
   def index
-    @api_v1_movie = Api::V1::Movie.all
+    @api_v1_movies = Api::V1::Movie.all
 
-    render json: @api_v1_movie
+    render json: @api_v1_movies
   end
 
-  # GET /api/v1/movie/1
+  # GET /api/v1/movies/1
   def show
     render json: @api_v1_movie
   end
 
-  # POST /api/v1/movie
+  # POST /api/v1/movies
   def create
     @api_v1_movie = Api::V1::Movie.new(api_v1_movie_params)
 
@@ -24,7 +24,7 @@ class Api::V1::MovieController < ApplicationController
     end
   end
 
-  # PATCH/PUT /api/v1/movie/1
+  # PATCH/PUT /api/v1/movies/1
   def update
     if @api_v1_movie.update(api_v1_movie_params)
       render json: @api_v1_movie
@@ -33,7 +33,7 @@ class Api::V1::MovieController < ApplicationController
     end
   end
 
-  # DELETE /api/v1/movie/1
+  # DELETE /api/v1/movies/1
   def destroy
     @api_v1_movie.destroy
   end

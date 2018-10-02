@@ -1,19 +1,19 @@
-class Api::V1::ShowController < ApplicationController
+class Api::V1::ShowsController < ApplicationController
   before_action :set_api_v1_show, only: [:show, :update, :destroy]
 
-  # GET /api/v1/show
+  # GET /api/v1/shows
   def index
-    @api_v1_show = Api::V1::Show.all
+    @api_v1_shows = Api::V1::Show.all
 
-    render json: @api_v1_show
+    render json: @api_v1_shows
   end
 
-  # GET /api/v1/show/1
+  # GET /api/v1/shows/1
   def show
     render json: @api_v1_show
   end
 
-  # POST /api/v1/show
+  # POST /api/v1/shows
   def create
     @api_v1_show = Api::V1::Show.new(api_v1_show_params)
 
@@ -24,7 +24,7 @@ class Api::V1::ShowController < ApplicationController
     end
   end
 
-  # PATCH/PUT /api/v1/show/1
+  # PATCH/PUT /api/v1/shows/1
   def update
     if @api_v1_show.update(api_v1_show_params)
       render json: @api_v1_show
@@ -33,7 +33,7 @@ class Api::V1::ShowController < ApplicationController
     end
   end
 
-  # DELETE /api/v1/show/1
+  # DELETE /api/v1/shows/1
   def destroy
     @api_v1_show.destroy
   end
