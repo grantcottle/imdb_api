@@ -10,38 +10,38 @@ class Api::V1::MoviesController < ApplicationController
 
   # GET /api/v1/movies/1
   def show
-    render json: @api_v1_movie
+    render json: @api_v1_movies
   end
 
   # POST /api/v1/movies
   def create
-    @api_v1_movie = Movie.new(api_v1_movie_params)
+    @api_v1_movies = Movie.new(api_v1_movie_params)
 
-    if @api_v1_movie.save
-      render json: @api_v1_movie, status: :created, location: @api_v1_movie
+    if @api_v1_movies.save
+      render json: @api_v1_movies, status: :created, location: @api_v1_movies
     else
-      render json: @api_v1_movie.errors, status: :unprocessable_entity
+      render json: @api_v1_movies.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /api/v1/movies/1
   def update
-    if @api_v1_movie.update(api_v1_movie_params)
-      render json: @api_v1_movie
+    if @api_v1_movies.update(api_v1_movie_params)
+      render json: @api_v1_movies
     else
-      render json: @api_v1_movie.errors, status: :unprocessable_entity
+      render json: @api_v1_movies.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /api/v1/movies/1
   def destroy
-    @api_v1_movie.destroy
+    @api_v1_movies.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_api_v1_movie
-      @api_v1_movie = Api::V1::Movie.find(params[:id])
+      @api_v1_movies = Movie.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
