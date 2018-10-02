@@ -3,7 +3,7 @@ class Api::V1::ShowsController < ApplicationController
 
   # GET /api/v1/shows
   def index
-    @api_v1_shows = Api::V1::Show.all
+    @api_v1_shows = Show.all
 
     render json: @api_v1_shows
   end
@@ -15,7 +15,7 @@ class Api::V1::ShowsController < ApplicationController
 
   # POST /api/v1/shows
   def create
-    @api_v1_show = Api::V1::Show.new(api_v1_show_params)
+    @api_v1_show = Show.new(api_v1_show_params)
 
     if @api_v1_show.save
       render json: @api_v1_show, status: :created, location: @api_v1_show

@@ -3,7 +3,7 @@ class Api::V1::MoviesController < ApplicationController
 
   # GET /api/v1/movies
   def index
-    @api_v1_movies = Api::V1::Movie.all
+    @api_v1_movies = Movie.all
 
     render json: @api_v1_movies
   end
@@ -15,7 +15,7 @@ class Api::V1::MoviesController < ApplicationController
 
   # POST /api/v1/movies
   def create
-    @api_v1_movie = Api::V1::Movie.new(api_v1_movie_params)
+    @api_v1_movie = Movie.new(api_v1_movie_params)
 
     if @api_v1_movie.save
       render json: @api_v1_movie, status: :created, location: @api_v1_movie
