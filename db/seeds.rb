@@ -26,3 +26,18 @@ movies = Movie.create([
     photo_url: "https://m.media-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_UY268_CR2,0,182,268_AL_.jpg",
     release_year: "2013",
     synopsis: "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."}])
+
+
+    50.times do
+        Movie.create({title: Faker::Name.name,
+        photo_url: Faker::LoremPixel.image,
+        release_year: Faker::Date.backward(5000),
+        synopsis: Faker::Lorem.sentence(3)})
+        end
+
+        50.times do
+            Show.create({title: Faker::Name.name,
+            photo_url: Faker::LoremPixel.image,
+            release_year: Faker::Date.backward(5000),
+            synopsis: Faker::Lorem.sentence(3)})
+            end

@@ -7,6 +7,7 @@ ruby '2.4.4'
 gem 'rails', '~> 5.2.1'
 gem 'rack-cors'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'faker'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
